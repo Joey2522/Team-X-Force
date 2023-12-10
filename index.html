@@ -10,32 +10,42 @@
   </head>
 
   <body>
-    <header>Global Date Night Recipe Generator</header>
-        <p>website directions</p>
+    <header class="header">Global Date Night Recipe Generator</header>
+        <p class="directions">website directions</p>
 
-            <section id="top-section" class="topSection">
-                <img src="assets/photos/" id="img1" class="pictures">
+          <section id="top-section" class="topSection">
+              <img src="assets/photos/" id="img1" class="pictures">
                 <div id="choose-box" class="chooseBox">
-                    <p id="inputContainer">Choose Country: <input type="text" id="country-input"></p>
-                    <button id="generate-btn" class="generateBtn">Generate Recipe &#127869;</button>
-                    <p class="">or</p>
-                    <p class="">Choose Random Country</p>
-                    <button id="random-btn" class="randomBtn">Random Recipe &#129335;</button>
+                  <div class="dropDown">
+                    <input type="text" class="countryInput" 
+                    placeholder="Dropdown Menu" readonly>
+                    <div class="option">
+                      <div onclick="show('United States')">United States</div>
+                      <div onclick="show('Egypt')">Egypt</div>
+                      <div onclick="show('Italy')">Italy</div>
+                      <div onclick="show('China')">China</div>
+                      <div onclick="show('Spain')">Spain</div>
+                    </div>
+                  </div>
+                <button id="get-recipe-btn" class="getRecipeBtn">Get Recipe &#127869;</button>
+                <p class="">or</p>
+                <p class="">Choose Random Country</p>
+                <button id="random-btn" class="randomBtn">Random Recipe &#129335;</button>
                 </div>
-                <img src="assets/photos/" id="img2" class="pictures">
-            </section>
+              <img src="assets/photos/" id="img2" class="pictures">
+          </section>
             
-            <section id="bottom-section" class="bottomSection">
-                <img src="assets/photos/" id="img3" class="pictures">
+          <section id="bottom-section" class="bottomSection">
+              <img src="assets/photos/" id="img3" class="pictures">
                 <div id="result-box" class="resultBox">
-                    <p>Let your North Pole date night begin</p>
-                    <img src="API" id="flag" class="flag">
-                    <div id="recipe-name" class="recipeName"></div>
-                    <div id="recipe-img" class="recipeImg"></div>
-                    <button id="favorite-btn" class="favoriteBtn">Favorite Recipe &#128154;</button>
+                  <p>Let your North Pole date night begin</p>
+                  <img src="API" id="flag" class="flag">
+                  <div id="recipe-name" class="recipeName"></div>
+                  <div id="recipe-img" class="recipeImg"></div>
+                  <button id="favorite-btn" class="favoriteBtn">Favorite Recipe &#128154;</button>
                 </div>
-                <img src="assets/photos/" id="img4" class="pictures">
-            </section>
+              <img src="assets/photos/" id="img4" class="pictures">
+          </section>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/script/script.js"></script>
