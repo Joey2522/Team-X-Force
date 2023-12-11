@@ -4,13 +4,13 @@ let randomButton = document.getElementById('random-btn');
 let recipeButton = document.getElementById('get-recipe-btn');
 let flagButton = document.getElementById('generate-btn');
 let optionsArray = ["United States", "Egypt", "Italy", "Spain", "Britain", "Brazil", "Russia", "China", "Thailand", "Jamaica"];
-let dropDown = document.getElementById('country-input');
+// let dropDown = document.getElementById('country-input');
 
-    for (var i = 0; i < optionsArray.length; i++)
-        var option = document.createElement("option");
-        option.value = optionsArray[i];
-        option.text = optionsArray[i];
-        dropDown.appendChild(option);
+    // for (var i = 0; i < optionsArray.length; i++)
+    //     var option = document.createElement("option");
+    //     option.value = optionsArray[i];
+    //     option.text = optionsArray[i];
+    //     dropDown.appendChild(option);
 
 
 function getRandom() {
@@ -86,8 +86,8 @@ function getFlag() {
 
 randomButton.addEventListener('click', getRandom);
 recipeButton.addEventListener('click', getRecipe);
-recipeButton.addEventListener('click', getDrop);
-flagButton.addEventListener('click', getFlag);
+// recipeButton.addEventListener('click', getDrop);
+// flagButton.addEventListener('click', getFlag);
 
 let dropDown = document.querySelector('.dropDown');
 dropDown.onclick = function(){
