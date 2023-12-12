@@ -3,7 +3,7 @@ let recipeNameEl = document.getElementById('recipe-name');
 let randomButton = document.getElementById('random-btn');
 let recipeButton = document.getElementById('get-recipe-btn');
 let flagButton = document.getElementById('generate-btn');
-let optionsArray = ["United States", "Egypt", "Italy", "Spain", "Britain", "Brazil", "Russia", "China", "Thailand", "Jamaica"];
+
 // let dropDown = document.getElementById('country-input');
 
     // for (var i = 0; i < optionsArray.length; i++)
