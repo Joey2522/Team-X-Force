@@ -36,8 +36,8 @@ function getRandom() {
     })
 };
 
-function getRecipe() {
-    let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian";
+function getRecipe(country) {
+    let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=" + country;
     
     fetch(requestUrl)
     .then(function (response) {
@@ -85,7 +85,7 @@ function getFlag() {
 };
 
 randomButton.addEventListener('click', getRandom);
-recipeButton.addEventListener('click', getRecipe);
+// recipeButton.addEventListener('click', getRecipe);
 // recipeButton.addEventListener('click', getDrop);
 // flagButton.addEventListener('click', getFlag);
 
@@ -96,6 +96,8 @@ dropDown.onclick = function(){
 
 function show(anything) {
     document.querySelector('.countryInput').value = anything;
+    getRecipe(anything);
+    console.log(anything);
 }
 
 
