@@ -1,0 +1,95 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: blue;
+}
+
+.topSection {
+    display: flex;
+    flex: column;
+    justify-content: center;
+}
+
+.bottomSection {
+    display: flex;
+    flex: column;
+    justify-content: center;
+} */
+
+
+
+/* Dropdown box styling beginning */
+.dropDown {
+    position: relative;
+    margin-top: 100px;
+    width: 300px;
+    height: 50px;
+}
+
+.dropDown::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 10000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.dropDown.active::before {
+    top: 25px;
+    transform: rotate(-225deg);
+}
+
+.dropDown input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    cursor: pointer;
+    background: whitesmoke;
+    border: solid blue;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.dropDown .option {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: whitesmoke;
+    box-shadow: 0 30px 30px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.dropDown.active .option {
+    display: block;
+}
+
+.dropDown .option div {
+    padding: 12px 20px;
+    cursor: pointer;
+    overflow: scroll;
+}
+
+.dropDown .option div:hover {
+    background: #62baea;
+    color: whitesmoke(0 9% 22%);
+}
+/* Dropdown box styling end*/

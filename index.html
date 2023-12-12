@@ -9,34 +9,55 @@ DOCTYPE html>
     <title>Global Date Night Recipe Generator</title>
   </head>
 
-  <body class="bg-red-950 text-center text-slate-600">
-    <header class="text-center text-yellow-500 text-4xl">Global Date Night Recipe Generator</header>
-        <p>website directions</p>
+  <body>
+    <header class="header">Global Date Night Recipe Generator</header>
+        <p class="directions">website directions</p>
 
-            <section id="top-section" class="topSection">
-                <img src="assets/photos/" id="img1" class="pictures">
+          <section id="top-section" class="topSection">
+              <img src="assets/photos/" id="img1" class="pictures">
                 <div id="choose-box" class="chooseBox">
-                    <p id="inputContainer">Choose Country: <input type="text" id="country-input"></p>
-                    <button id="generate-btn" class="generateBtn bg-slate-900 text-red-700">Generate Recipe &#127869;</button>
-                    <p class="">or</p>
-                    <p class="">Choose Random Country</p>
-                    <button id="random-btn" class="randomBtn bg-slate-900 text-red-700">Random Recipe &#129335;</button>
+                  <div class="dropDown">
+                    <input type="text" class="countryInput" 
+                    placeholder="Dropdown Menu" readonly>
+                    <div class="option">
+                      <div onclick="show('United States')">United States</div>
+                      <div onclick="show('Egypt')">Egypt</div>
+                      <div onclick="show('Italy')">Italy</div>
+                      <div onclick="show('China')">China</div>
+                      <div onclick="show('Spain')">Spain</div>
+                      <div onclick="show('Russia')">Russia</div>
+                      <div onclick="show('Brazil')">Brazil</div>
+                      <div onclick="show('Thailand')">Thailand</div>
+                      <div onclick="show('France')">France</div>
+                      <div onclick="show('United Kingdom')">United Kingdom</div>
+                      <div onclick="show('Canada')">Canada</div>
+                      <div onclick="show('Japan')">Japan</div>
+                      <div onclick="show('Australia')">Australia</div>
+                      <div onclick="show('Mexico')">Mexico</div>
+                      <div onclick="show('Jamaica')">Jamaica</div>
+                    </div>
+                  </div>
+                <button id="get-recipe-btn" class="getRecipeBtn">Get Recipe &#127869;</button>
+                <p class="">or</p>
+                <p class="">Choose Random Country</p>
+                <button id="random-btn" class="randomBtn">Random Recipe &#129335;</button>
                 </div>
-                <img src="assets/photos/" id="img2" class="pictures">
-            </section>
+              <img src="assets/photos/" id="img2" class="pictures">
+          </section>
             
-            <section id="bottom-section" class="bottomSection">
-                <img src="assets/photos/" id="img3" class="pictures">
+          <section id="bottom-section" class="bottomSection">
+              <img src="assets/photos/" id="img3" class="pictures">
                 <div id="result-box" class="resultBox">
-                    <p>Let your North Pole date night begin</p>
-                    <img src="API" id="flag" class="flag">
-                    <div id="recipe-name" class="recipeName"></div>
-                    <div id="recipe-img" class="recipeImg"></div>
-                    <button id="favorite-btn" class="favoriteBtn bg-slate-900 text-red-700">Favorite Recipe &#128154;</button>
+                  <p>Let your North Pole date night begin</p>
+                  <img src="API" id="flag" class="flag">
+                  <div id="recipe-name" class="recipeName"></div>
+                  <div id="recipe-img" class="recipeImg"></div>
+                  <button id="favorite-btn" class="favoriteBtn">Favorite Recipe &#128154;</button>
                 </div>
-                <img src="assets/photos/" id="img4" class="pictures">
-            </section>
-  
+              <img src="assets/photos/" id="img4" class="pictures">
+          </section>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/script/script.js"></script>
   </body>
 

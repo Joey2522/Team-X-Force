@@ -1,8 +1,17 @@
 let recipeImgEl = document.getElementById('recipe-img');
 let recipeNameEl = document.getElementById('recipe-name');
 let randomButton = document.getElementById('random-btn');
-let recipeButton = document.getElementById('generate-btn');
+let recipeButton = document.getElementById('get-recipe-btn');
 let flagButton = document.getElementById('generate-btn');
+let optionsArray = ["United States", "Egypt", "Italy", "Spain", "Britain", "Brazil", "Russia", "China", "Thailand", "Jamaica"];
+// let dropDown = document.getElementById('country-input');
+
+    // for (var i = 0; i < optionsArray.length; i++)
+    //     var option = document.createElement("option");
+    //     option.value = optionsArray[i];
+    //     option.text = optionsArray[i];
+    //     dropDown.appendChild(option);
+
 
 function getRandom() {
     let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian";
@@ -77,9 +86,16 @@ function getFlag() {
 
 randomButton.addEventListener('click', getRandom);
 recipeButton.addEventListener('click', getRecipe);
-flagButton.addEventListener('click', getFlag);
+// recipeButton.addEventListener('click', getDrop);
+// flagButton.addEventListener('click', getFlag);
 
+let dropDown = document.querySelector('.dropDown');
+dropDown.onclick = function(){
+    dropDown.classList.toggle('active');
+};
 
-
+function show(anything) {
+    document.querySelector('.countryInput').value = anything;
+}
 
 
