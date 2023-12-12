@@ -1,7 +1,7 @@
 let recipeLinkEl = document.getElementById('recipe-link');
 let recipeNameEl = document.getElementById('recipe-name');
-// let randomButton = document.getElementById('random-btn');
-// let flagButton = document.getElementById('generate-btn');
+let randomButton = document.getElementById('random-btn');
+let flagButton = document.getElementById('generate-btn');
 let favButton = document.getElementById('favorite-btn');
 
 // let dropDown = document.getElementById('country-input');
@@ -13,28 +13,28 @@ let favButton = document.getElementById('favorite-btn');
     //     dropDown.appendChild(option);
 
 
-// function getRandom() {
-//     let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian";
+function getRandom() {
+    let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian";
 
-//     fetch(requestUrl)
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         console.log(data);
-//             for (var i = 0; i < data.meals.length; i++) 
-//             var randomIndex = Math.floor(Math.random()*data.meals.length);
-//             var randomMeal = data.meals[randomIndex];
-//                 let recipeName = document.createElement('h2');
-//                 let recipeImg = document.createElement('p');
-//                 recipeName.textContent = randomMeal.strMeal;
-//                 recipeImg.textContent = randomMeal.strMealThumb;
-//                 recipeNameEl.append(recipeName);
-//                 recipeImgEl.append(recipeImg);
-//             }).catch(error => {
-//                 console.log(error);
-//     })
-// };
+    fetch(requestUrl)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+            for (var i = 0; i < data.meals.length; i++) 
+            var randomIndex = Math.floor(Math.random()*data.meals.length);
+            var randomMeal = data.meals[randomIndex];
+                let recipeName = document.createElement('h2');
+                let recipeImg = document.createElement('p');
+                recipeName.textContent = randomMeal.strMeal;
+                recipeImg.textContent = randomMeal.strMealThumb;
+                recipeNameEl.append(recipeName);
+                recipeImgEl.append(recipeImg);
+            }).catch(error => {
+                console.log(error);
+    })
+};
 
 function getRecipe(country) {
     let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=" + country;
@@ -58,29 +58,30 @@ function getRecipe(country) {
                 console.log(error);
     })
 };
-// function getFlag() {
-//     let requestUrl = "https://restcountries.com/v3.1/all";
+
+function getFlag() {
+    let requestUrl = "https://restcountries.com/v3.1/all";
     
-//     fetch(requestUrl)
-//     .then(function (response) {
-//          return response.json();
-//     })
-//     .then(function (data) {
-//         console.log(data);
-//              for (var i = 0; i < data.meals.length; i++) 
-//             // var randomIndex = Math.floor(Math.random()*data.meals.length)
-//             // var randomMeal = data.meals[randomIndex];
-//                 console.log(data)
-//                 let recipeName = document.createElement('h2');
-//                 let recipeImg = document.createElement('p');
-//                 recipeName.textContent = randomMeal.strMeal;
-//                 recipeImg.textContent = randomMeal.strMealThumb;
-//                 recipeNameEl.append(recipeName);
-//                 recipeImgEl.append(recipeImg);
-//             }).catch(error => {
-//                 console.log(error);
-//     })
-// };
+    fetch(requestUrl)
+    .then(function (response) {
+         return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+             for (var i = 0; i < data.meals.length; i++) 
+            // var randomIndex = Math.floor(Math.random()*data.meals.length)
+            // var randomMeal = data.meals[randomIndex];
+                console.log(data)
+                let recipeName = document.createElement('h2');
+                let recipeImg = document.createElement('p');
+                recipeName.textContent = randomMeal.strMeal;
+                recipeImg.textContent = randomMeal.strMealThumb;
+                recipeNameEl.append(recipeName);
+                recipeImgEl.append(recipeImg);
+            }).catch(error => {
+                console.log(error);
+    })
+};
 
 
 // flagButton.addEventListener('click', getFlag);
