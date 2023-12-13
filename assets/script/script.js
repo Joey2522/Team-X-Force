@@ -3,6 +3,8 @@ let recipeNameEl = document.getElementById('recipe-name');
 let randomButton = document.getElementById('random-btn');
 let flagButton = document.getElementById('generate-btn');
 let favButton = document.getElementById('favorite-btn');
+let recipeLink;
+
 
 // let dropDown = document.getElementById('country-input');
 
@@ -49,7 +51,7 @@ function getRecipe(country) {
             var randomIndex = Math.floor(Math.random()*data.meals.length)
             var randomMeal = data.meals[randomIndex];
                 let recipeName = document.createElement('h2');
-                let recipeLink = document.createElement('p');
+                recipeLink = document.createElement('p');
                 recipeName.textContent = randomMeal.strMeal;
                 recipeLink.textContent = randomMeal.strMealThumb;
                 recipeNameEl.append(recipeName);
@@ -96,21 +98,19 @@ function show(anything) {
     getRecipe(anything);
     console.log(anything);
 }
-    //saves the entered text to the local storage when the favorite button is hit
-// function saveRecipe() {
-//     $('favorite-btn').on('click', function() {
-//         const key = $(this).parent().attr('id');
-//         const value = $(this).siblings('.description').val();
-//         localStorage.setItem(key, value);
-//         console.log(favorite);
-//     });git 
-// }
+
 favButton.addEventListener('click', saveRecipe);
 
 function saveRecipe() {
-    const key = $(this).parent().attr('id');
-    const value = $(this).siblings('.recipe-link').val();
-    localStorage.setItem(key, value);
+    const key = "savedRecipes";
+    const existingArray = localStorage.getItem(key);
+    let recipeArray = []
+    if (existingArray) {
+        recipeArray = JSON.parse(existingArray);
+    }
+    const value = recipeLink.textContent;
+    recipeArray.push(value);
+    localStorage.setItem(key, JSON.stringify(recipeArray));
     localStorage.getItem(key);
     console.log(localStorage.getItem(key));
 };
