@@ -93,3 +93,20 @@ body {
     color: whitesmoke(0 9% 22%);
 }
 /* Dropdown box styling end*/
+
+.recipeLink {
+    color: #007bff; /* Example color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recipeLink:hover {
+    text-decoration: underline;
+}
+
+body {
+    /* background-image: url(./images/DALL·E\ 2023-12-11\ 22.38.43\ -\ A\ cozy\,\ romantic\ dinner\ setting\ for\ a\ global\ date\ night.\ The\ scene\ is\ set\ outdoors\ under\ a\ starry\ night\ sky\,\ with\ a\ beautifully\ laid\ table\ for\ two.\ Th.png);  */
+    background-size: cover; /* This ensures that the background covers the whole page */
+    background-repeat: no-repeat; /* This prevents the image from repeating */
+    background-attachment: fixed; /* This makes the background fixed during scrolling */
+}
