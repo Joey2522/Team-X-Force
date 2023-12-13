@@ -1,42 +1,60 @@
+// SCRIPT //
+
+// Variables 
+
 let recipeLinkEl = document.getElementById('recipe-link');
 let recipeNameEl = document.getElementById('recipe-name');
 let randomButton = document.getElementById('random-btn');
 let flagButton = document.getElementById('generate-btn');
 let favButton = document.getElementById('favorite-btn');
-let recipeLink;
+let recipeImgEl = document.getElementById('recipe-img');
+let flagEl = document.getElementById('flag');
+let countryNameEl = document.getElementById('country-name');
+let resultContainer = document.getElementById('resultContainer');
+let flagImage = document.getElementById('flagImage');
+let recipeText = document.getElementById('recipeText');
+let recipeLink = document.getElementById('recipeLink');
+let recipeButton = document.getElementById('get-recipe-btn');
 
 
-// let dropDown = document.getElementById('country-input');
+let recipeUrlLink;
 
-    // for (var i = 0; i < optionsArray.length; i++)
-    //     var option = document.createElement("option");
-    //     option.value = optionsArray[i];
-    //     option.text = optionsArray[i];
-    //     dropDown.appendChild(option);
+// RANDOM RECIPE BUTTON 
 
+randomButton.addEventListener("click", async () => {
+    resultContainer.style.display = "none"; // Hide previous results
 
-function getRandom() {
-    let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian";
+    try {
+        // Fetch a random country from the RestCountries API
+        const countryResponse = await fetch("https://restcountries.com/v3.1/all");
+        const countries = await countryResponse.json();
+        const randomCountry = countries[Math.floor(Math.random() * countries.length)];
 
-    fetch(requestUrl)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-            for (var i = 0; i < data.meals.length; i++) 
-            var randomIndex = Math.floor(Math.random()*data.meals.length);
-            var randomMeal = data.meals[randomIndex];
-                let recipeName = document.createElement('h2');
-                let recipeImg = document.createElement('p');
-                recipeName.textContent = randomMeal.strMeal;
-                recipeImg.textContent = randomMeal.strMealThumb;
-                recipeNameEl.append(recipeName);
-                recipeImgEl.append(recipeImg);
-            }).catch(error => {
-                console.log(error);
-    })
-};
+        // Fetch a random recipe from the MealDB API
+        const recipeResponse = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+        const recipeData = await recipeResponse.json();
+        const randomRecipe = recipeData.meals[0];
+
+        // Update the UI with the random country and its flag
+        resultContainer.style.display = "block";
+        flagImage.src = randomCountry.flags.svg;
+        recipeText.textContent = `Country: ${randomCountry.name.common}`;
+
+        if (randomRecipe) {
+            recipeLink.href = randomRecipe.strSource || '#'; // Use '#' if strSource is undefined
+            recipeLink.textContent = `Full Recipe for ${randomRecipe.strMeal}`;
+        } else {
+            recipeLink.href = '#';
+            recipeLink.textContent = 'Explore More Recipes';
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        resultContainer.style.display = "block";
+        recipeText.textContent = "Sorry, something went wrong. Please try again later.";
+    }
+});
+
+// get recipe function for drop down
 
 function getRecipe(country) {
     let requestUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=" + country;
@@ -61,32 +79,37 @@ function getRecipe(country) {
     })
 };
 
-function getFlag() {
-    let requestUrl = "https://restcountries.com/v3.1/all";
+// get flag function - need to have flag and coutry and recipe pull up after selecting country on dropdown, same as random recipe button
+
+// function getFlag() {
+//     let requestUrl = "https://restcountries.com/v3.1/all";
     
-    fetch(requestUrl)
-    .then(function (response) {
-         return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-             for (var i = 0; i < data.meals.length; i++) 
-            // var randomIndex = Math.floor(Math.random()*data.meals.length)
-            // var randomMeal = data.meals[randomIndex];
-                console.log(data)
-                let recipeName = document.createElement('h2');
-                let recipeImg = document.createElement('p');
-                recipeName.textContent = randomMeal.strMeal;
-                recipeImg.textContent = randomMeal.strMealThumb;
-                recipeNameEl.append(recipeName);
-                recipeImgEl.append(recipeImg);
-            }).catch(error => {
-                console.log(error);
-    })
-};
+//     fetch(requestUrl)
+//     .then(function (response) {
+//          return response.json();
+//     })
+//     .then(function (data) {
+//         console.log(data);
+//              for (var i = 0; i < data.meals.length; i++) 
+//             var randomIndex = Math.floor(Math.random()*data.meals.length)
+//             var randomMeal = data.meals[randomIndex];
+//                 console.log(data)
+//                 let recipeName = document.createElement('h2');
+//                 let recipeImg = document.createElement('p');
+//                 recipeName.textContent = randomMeal.strMeal;
+//                 recipeImg.textContent = randomMeal.strMealThumb;
+//                 recipeNameEl.append(recipeName);
+//                 recipeImgEl.append(recipeImg);
+//             }).catch(error => {
+//                 console.log(error);
+//     })
+// };
 
 
 // flagButton.addEventListener('click', getFlag);
+
+
+// Dropdown button Fuction 
 
 let dropDown = document.querySelector('.dropDown');
 dropDown.onclick = function() {
@@ -98,6 +121,8 @@ function show(anything) {
     getRecipe(anything);
     console.log(anything);
 }
+
+// Save Recipe function + Local Storage code 
 
 favButton.addEventListener('click', saveRecipe);
 
@@ -116,11 +141,4 @@ function saveRecipe() {
 };
 
 
-    
-      //allows the saved text to remain in the local storage even after a page refresh
-    // $('.time-block').each(function() {
-    //     const key = $(this).attr('id');
-    //     const value = localStorage.getItem(key);
-    //     $(this).children('.description').val(value);
-// });
 
