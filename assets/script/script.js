@@ -78,8 +78,8 @@ randomButton.addEventListener("click", async () => {
 //                 console.log(error);
 //     })
 // };
-// Local 
-// Dropdown button Fuction 
+
+// Dropdown button Function 
 
 // let dropDown = document.querySelector('.dropDown');
 // dropDown.onclick = function() {
