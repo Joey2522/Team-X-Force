@@ -23,7 +23,9 @@ body {
     justify-content: center;
 } */
 
-
+body {
+    background-image: linear-gradient(#5B2333, #5b2f23);
+}
 
 /* Dropdown box styling beginning */
 .dropDown {
@@ -94,3 +96,8 @@ body {
     color: whitesmoke(0 9% 22%);
 }
 /* Dropdown box styling end*/
+
+h2 {
+    font-weight: bold;
+}
+
