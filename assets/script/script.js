@@ -78,37 +78,7 @@ randomButton.addEventListener("click", async () => {
 //                 console.log(error);
 //     })
 // };
-
-// get flag function - need to have flag and coutry and recipe pull up after selecting country on dropdown, same as random recipe button
-
-// function getFlag() {
-//     let requestUrl = "https://restcountries.com/v3.1/all";
-    
-//     fetch(requestUrl)
-//     .then(function (response) {
-//          return response.json();
-//     })
-//     .then(function (data) {
-//         console.log(data);
-//              for (var i = 0; i < data.meals.length; i++) 
-//             var randomIndex = Math.floor(Math.random()*data.meals.length)
-//             var randomMeal = data.meals[randomIndex];
-//                 console.log(data)
-//                 let recipeName = document.createElement('h2');
-//                 let recipeImg = document.createElement('p');
-//                 recipeName.textContent = randomMeal.strMeal;
-//                 recipeImg.textContent = randomMeal.strMealThumb;
-//                 recipeNameEl.append(recipeName);
-//                 recipeImgEl.append(recipeImg);
-//             }).catch(error => {
-//                 console.log(error);
-//     })
-// };
-
-
-// flagButton.addEventListener('click', getFlag);
-
-
+Local 
 // Dropdown button Fuction 
 
 // let dropDown = document.querySelector('.dropDown');
