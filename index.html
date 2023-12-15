@@ -1,80 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Global Date Night Recipe Generator</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
-    <link rel="stylesheet" href="src\output.css">
-    <title>Global Date Night Recipe Generator</title>
-  </head>
-
-  <body class="bg-red-950 text-center text-slate-600">
+</head>
+<body class="bg-red-950 text-center text-slate-600">
     <header class="header text-center text-yellow-500 text-4xl">Global Date Night Recipe Generator</header>
-        <p class="directions text-black">website directions</p> 
+    <p class="directions text-black">website directions</p>
 
-          <section id="top-section" class="topSection">
-                <div id="choose-box" class="chooseBox">
+    <section id="top-section" class="topSection">
+        <div id="choose-box" class="chooseBox">
+            <button id="random-btn" class="randomBtn bg-slate-900 text-red-700">Get Recipe &#129335;</button>
+        </div>
+    </section>
 
-                    
-                <!-- <p class="">Choose a</p> -->
-                <button id="random-btn" class="randomBtn bg-slate-900 text-red-700">Get Recipe &#129335;</button>
-                <!-- <p class="">or</p>
+    <section id="bottom-section" class="bottomSection">
+        <div id="result-box" class="resultBox">
+            <div id="recipe-name" class="recipeName"></div>
+            <div id="recipe-link" class="recipeLink"></div>
+            <button id="favorite-btn" class="favoriteBtn">Favorite Recipe &#128154;</button>
+        </div>
+        <div id="resultContainer" style="display: none;">
+            <img id="flagImage" src="" alt="Country Flag">
+            <p id="recipeText"></p>
+            <a id="recipeLink" href="#" target="_blank">Recipe Link</a>
+        </div>
+    </section>
 
-                  <div class="dropDown">
-                    <input type="text" class="countryInput" 
-                    placeholder="Dropdown Menu" readonly>
-                    <div class="option">
-                      <div onclick="show('United States')">United States</div>
-                      <div onclick="show('Egyptian')">Egypt</div>
-                      <div onclick="show('Italy')">Italy</div>
-                      <div onclick="show('China')">China</div>
-                      <div onclick="show('Spain')">Spain</div>
-                      <div onclick="show('Russia')">Russia</div>
-                      <div onclick="show('Thailand')">Thailand</div>
-                      <div onclick="show('France')">France</div>
-                      <div onclick="show('Canada')">Canada</div>
-                      <div onclick="show('Japan')">Japan</div>
-                      <div onclick="show('Australia')">Australia</div>
-                      <div onclick="show('Mexico')">Mexico</div>
-                      <div onclick="show('Jamaica')">Jamaica</div>
-                      <div onclick="show('Germany')">Germany</div>
-                      <div onclick="show('India')">India</div>
-                      <div onclick="show('South Korea')">South Korea</div>
-                      <div onclick="show('Greece')">Greece</div>
-                      <div onclick="show('Turkey')">Turkey</div>
-                      <div onclick="show('Sweden')">Sweden</div>
-                      <div onclick="show('Norway')">Norway</div>
-                      <div onclick="show('Netherlands')">Netherlands</div>
-                      <div onclick="show('Switzerland')">Switzerland</div>
-                      <div onclick="show('Austria')">Austria</div>
-                      <div onclick="show('Portugal')">Portugal</div>
-                      <div onclick="show('Ireland')">Ireland</div>
-                    </div>
-                  </div>
-                </div> -->
-          </section>
-            
-          <section id="bottom-section" class="bottomSection">
-                <div id="result-box" class="resultBox">
-                  <div id="recipe-name" class="recipeName"></div>
+    <section id="favorite-recipes-section" class="favoriteRecipesSection">
+        <h2 class="favoriteRecipesTitle">Favorite Recipes</h2>
+        <div id="favorite-recipes-list" class="favoriteRecipesList"></div>
+        <button id="clear-recipes-btn" class="clearRecipesBtn">Clear Favorite Recipes</button>
+    </section>
 
-                  <div id="recipe-link" class="recipeLink"></div>
-                  <button id="favorite-btn" class="favoriteBtn">Favorite Recipe &#128154;</button>
-                </div>
-              <!-- Additional Container for Random Country and Recipe -->
-            <div id="resultContainer" style="display: none;">
-              <img id="flagImage" src="" alt="Country Flag">
-              <p id="recipeText"></p>
-              <a id="recipeLink" href="#" target="_blank">Recipe Link</a>
-            </div>
-          </section>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script src="assets/script/script.js"></script>
-  </body>
-
+</body>
 </html>
+
