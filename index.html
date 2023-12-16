@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
     <link rel="stylesheet" href="src\output.css">
-    <title>Global Date Night Recipe Generator</title>
+    <title>Global Date Night Random Recipe Generator</title>
   </head>
 
   <body class="text-center text-black">
-    <header class="header text-center text-yellow-500 text-4xl">🕯️ Global Date Night Recipe Generator 🕯️</header>
-        <h1 class="directions text-slate-900 text-2xl font-bold">Website Directions 😘🌹</h1> 
-        <p class="text-xl italic text-slate-900">Welcome to the Global Date Night Random Recipe Generator. We want to help make your next date night a fun and exciting event. Just click the “Get Recipe” button below and you will be presented with a random countries flag and a link to a recipe from that same country. Your recipe could be from anywhere around the globe. If you find a recipe link that you like you can hit the “Favorite” button and save that recipe to the “Saved Recipe Links” section of the page. We hope this site helps you make your date night a night to remember.</p>
+    <header class="header text-center text-yellow-500 text-4xl p-10">🕯️ Global Date Night Random Recipe Generator 🕯️</header>
+        <h1 class="directions text-stone-300 underline text-2xl font-bold p-2">Website Directions 😘🌹</h1> 
+        <p class="text-xl  text-stone-300 p-2">Welcome to the Global Date Night Random Recipe Generator.<br> We want to help make your next date night a fun and exciting event. Just click the “Get Recipe” button below<br> and you will be presented with a random countries flag and a link to a recipe from that same country.<br> Your recipe could be from anywhere around the globe. If you find a recipe link that you like<br> you can hit the “Favorite” button and save that recipe to the “Saved Recipe Links” section of the page.<br> We hope this site helps you make your date night a night to remember.</p>
 
 
           <section id="top-section" class="topSection justify-center">
@@ -21,7 +21,7 @@
 
                     
                 <!-- <p class="">Choose a</p> -->
-                <button id="random-btn" class="randomBtn bg-slate-900 hover:bg-slate-800 hover:text-pink-600 text-red-700 space-y-4">Get Recipe &#129335;</button>
+                <button id="random-btn" class="randomBtn rounded-md bg-slate-900 hover:bg-slate-800 hover:text-pink-600 text-red-700 space-y-4 text-7xl">Get Recipe</button>
                 <!-- <p class="">or</p>
 
                   <div class="dropDown">
@@ -63,44 +63,19 @@
                   <div id="recipe-name" class="recipeName"></div>
 
                   <div id="recipe-link" class="recipeLink"></div>
-                  <button id="favorite-btn" class="favoriteBtn  bg-slate-900 text-red-700 hover:text-pink-600 hover:bg-slate-800">Favorite Recipe &#128154;</button>
+                  <button id="favorite-btn" class="favoriteBtn text-5xl  bg-slate-900 text-red-700 hover:text-pink-600 hover:bg-slate-800 rounded-md">Favorite Recipe &#128154;</button>
                 </div>
               <!-- Additional Container for Random Country and Recipe -->
             <div id="resultContainer" style="display: none;">
               <img id="flagImage" src="" class="w-1/3 h-auto m-auto" alt="Country Flag">
-              <p id="recipeText" class="text-black font-bold"></p>
-              <a id="recipeLink" class="text-purple-600 hover:text-purple-400" href="#" target="_blank">Recipe Link</a>
+              <p id="recipeText" class="text-black font-bold text-2xl"></p>
+              <a id="recipeLink" class="text-purple-600 hover:text-purple-400 text-2xl" href="#" target="_blank">Recipe Link</a>
             </div>
           </section>
-   
-</head>
-<body class="bg-red-950 text-center text-slate-600">
-    <header class="header text-center text-yellow-500 text-4xl">Global Date Night Recipe Generator</header>
-    <p class="directions text-black">website directions</p>
-
-    <section id="top-section" class="topSection">
-        <div id="choose-box" class="chooseBox">
-            <button id="random-btn" class="randomBtn bg-slate-900 text-red-700">Get Recipe &#129335;</button>
-        </div>
-    </section>
-
-    <section id="bottom-section" class="bottomSection">
-        <div id="result-box" class="resultBox">
-            <div id="recipe-name" class="recipeName"></div>
-            <div id="recipe-link" class="recipeLink"></div>
-            <button id="favorite-btn" class="favoriteBtn">Favorite Recipe &#128154;</button>
-        </div>
-        <div id="resultContainer" style="display: none;">
-            <img id="flagImage" src="" alt="Country Flag">
-            <p id="recipeText"></p>
-            <a id="recipeLink" href="#" target="_blank">Recipe Link</a>
-        </div>
-    </section>
-
     <section id="favorite-recipes-section" class="favoriteRecipesSection">
-        <h2 class="favoriteRecipesTitle">Favorite Recipes</h2>
-        <div id="favorite-recipes-list" class="favoriteRecipesList"></div>
-        <button id="clear-recipes-btn" class="clearRecipesBtn">Clear Favorite Recipes</button>
+        <h2 class="favoriteRecipesTitle text-zinc-950 font-bold underline text-5xl p-6">Favorite Recipes</h2>
+        <div id="favorite-recipes-list" class="favoriteRecipesList text-yellow-400 hover:text-yellow-200 text-2xl"></div>
+        <button id="clear-recipes-btn" class="clearRecipesBtn text-5xl rounded-md bg-slate-900 text-red-700 hover:text-pink-600 hover:bg-slate-800">Clear Favorite Recipes</button>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
