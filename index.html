@@ -12,74 +12,37 @@
 
   <body class="text-center text-black">
     <header class="header text-center text-yellow-500 text-4xl p-10">🕯️ Global Date Night Random Recipe Generator 🕯️</header>
-        <h1 class="directions text-stone-300 underline text-2xl font-bold p-2">Website Directions 😘🌹</h1> 
-        <p class="text-xl  text-stone-300 p-2">Welcome to the Global Date Night Random Recipe Generator.<br> We want to help make your next date night a fun and exciting event. Just click the “Get Recipe” button below<br> and you will be presented with a random countries flag and a link to a recipe from that same country.<br> Your recipe could be from anywhere around the globe. If you find a recipe link that you like<br> you can hit the “Favorite” button and save that recipe to the “Saved Recipe Links” section of the page.<br> We hope this site helps you make your date night a night to remember.</p>
+      <h1 class="directions text-stone-300 underline text-2xl font-bold p-2">Website Directions 😘🌹</h1> 
+      <p class="text-xl  text-stone-300 p-2">Welcome to the Global Date Night Random Recipe Generator.<br> We want to help make your next date night a fun and exciting event. Just click the “Get Recipe” button below<br> and you will be presented with a random countries flag and a link to a recipe from that same country.<br> Your recipe could be from anywhere around the globe. If you find a recipe link that you like<br> you can hit the “Favorite” button and save that recipe to the “Saved Recipe Links” section of the page.<br> We hope this site helps you make your date night a night to remember.</p>
 
-
-          <section id="top-section" class="topSection justify-center">
-                <div id="choose-box" class="chooseBox space-y-4 p-6">
-
-                    
-                <!-- <p class="">Choose a</p> -->
-                <button id="random-btn" class="randomBtn rounded-md bg-slate-900 hover:bg-slate-800 hover:text-pink-600 text-red-700 space-y-4 text-7xl p-2">Get Recipe</button>
-                <!-- <p class="">or</p>
-
-                  <div class="dropDown">
-                    <input type="text" class="countryInput" 
-                    placeholder="Dropdown Menu" readonly>
-                    <div class="option">
-                      <div onclick="show('United States')">United States</div>
-                      <div onclick="show('Egyptian')">Egypt</div>
-                      <div onclick="show('Italy')">Italy</div>
-                      <div onclick="show('China')">China</div>
-                      <div onclick="show('Spain')">Spain</div>
-                      <div onclick="show('Russia')">Russia</div>
-                      <div onclick="show('Thailand')">Thailand</div>
-                      <div onclick="show('France')">France</div>
-                      <div onclick="show('Canada')">Canada</div>
-                      <div onclick="show('Japan')">Japan</div>
-                      <div onclick="show('Australia')">Australia</div>
-                      <div onclick="show('Mexico')">Mexico</div>
-                      <div onclick="show('Jamaica')">Jamaica</div>
-                      <div onclick="show('Germany')">Germany</div>
-                      <div onclick="show('India')">India</div>
-                      <div onclick="show('South Korea')">South Korea</div>
-                      <div onclick="show('Greece')">Greece</div>
-                      <div onclick="show('Turkey')">Turkey</div>
-                      <div onclick="show('Sweden')">Sweden</div>
-                      <div onclick="show('Norway')">Norway</div>
-                      <div onclick="show('Netherlands')">Netherlands</div>
-                      <div onclick="show('Switzerland')">Switzerland</div>
-                      <div onclick="show('Austria')">Austria</div>
-                      <div onclick="show('Portugal')">Portugal</div>
-                      <div onclick="show('Ireland')">Ireland</div>
-                    </div>
-                  </div>
-                </div> -->
-          </section>
+      <section id="top-section" class="topSection justify-center">
+        <div id="choose-box" class="chooseBox space-y-4 p-6">
+        <button id="random-btn" class="randomBtn rounded-md bg-slate-900 hover:bg-slate-800 hover:text-pink-600 text-red-700 space-y-4 text-7xl p-2">Get Recipe</button>
+      </section>
             
-          <section id="bottom-section" class="bottomSection space-y-4 justify-center">
-                <div id="result-box" class="resultBox">
-                  <div id="recipe-name" class="recipeName"></div>
-
-                  <div id="recipe-link" class="recipeLink"></div>
-                  <button id="favorite-btn" class="favoriteBtn text-5xl  bg-slate-900 text-red-700 hover:text-pink-600 hover:bg-slate-800 rounded-md p-2">Favorite Recipe &#128154;</button>
-                </div>
-              <!-- Additional Container for Random Country and Recipe -->
+      <section id="bottom-section" class="bottomSection space-y-4 justify-center">
+        <div id="result-box" class="resultBox">
+          <div id="recipe-name" class="recipeName"></div>
+            <div id="recipe-link" class="recipeLink"></div>
+            <button id="favorite-btn" class="favoriteBtn text-5xl  bg-slate-900 text-red-700 hover:text-pink-600 hover:bg-slate-800 rounded-md p-2">Favorite Recipe &#128154;</button>
+            </div>
+            <!-- Additional Container for Random Country and Recipe -->
             <div id="resultContainer" style="display: none;" class="p-10">
               <img id="flagImage" src="" class="w-1/3 h-auto m-auto" alt="Country Flag">
               <p id="recipeText" class="text-black font-bold text-2xl"></p>
               <a id="recipeLink" class="text-purple-600 hover:text-purple-400 text-2xl" href="#" target="_blank">Recipe Link</a>
             </div>
           </section>
-    <section id="favorite-recipes-section" class="favoriteRecipesSection">
+
+      <section id="favorite-recipes-section" class="favoriteRecipesSection">
         <h2 class="favoriteRecipesTitle text-zinc-950 font-bold underline text-5xl p-6">Favorite Recipes List:</h2>
         <div id="favorite-recipes-list" class="favoriteRecipesList text-yellow-400 hover:text-yellow-200 text-2xl p-10"></div>
         <button id="clear-recipes-btn" class="clearRecipesBtn text-5xl rounded-md bg-slate-900 text-red-700 hover:text-pink-600 hover:bg-slate-800 p-2">Clear Favorite Recipes</button>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/script/script.js"></script>
-</body>
+      </section>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="assets/script/script.js"></script>
+  </body>
 </html>
 
